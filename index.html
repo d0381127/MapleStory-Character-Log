@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>楓之谷角色任務簿</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <header class="hero">
+            <div>
+                <div class="eyebrow">MAPLE STORY · PERSONAL LOG</div>
+                <h1>角色任務簿</h1>
+                <p>記住每一隻角色解過什麼，也看清楚伺服器與帳號共用的每日、每週進度。</p>
+            </div>
+            <div class="mark">🍁</div>
+        </header>
+        <div class="toolbar"><button id="add">＋新增角色</button><button id="export" class="secondary">匯出完整
+                JSON</button><button id="split" class="secondary">分檔匯出</button><label class="file">匯入一個或多個 JSON<input
+                    id="import" type="file" accept="application/json,.json" multiple></label><button id="resetDaily"
+                class="ghost">清除每日進度</button><button id="resetWeekly" class="ghost">清除每週進度</button><span
+                id="status" class="status"></span></div>
+        <div class="layout">
+            <div>
+                <section class="panel">
+                    <div class="head">
+                        <div>
+                            <p class="kicker">CHARACTERS</p>
+                            <h2>角色資料</h2>
+                        </div>
+                    </div>
+                    <div id="characters" class="characters"></div>
+                </section>
+                <section class="panel">
+                    <div class="head">
+                        <div>
+                            <p class="kicker">AUT DAILY QUEST</p>
+                            <h2>AUT 每日任務</h2>
+                        </div>
+                    </div>
+                    <p class="note">每日任務</p>
+                    <div id="aut"></div>
+                </section>
+                <section class="panel">
+                    <div class="head">
+                        <div>
+                            <p class="kicker">NORMAL MONSTER PARK · SERVER SHARED</p>
+                            <h2>普通怪物公園</h2>
+                        </div>
+                    </div>
+                    <div id="serverNormal"></div>
+                </section>
+            </div>
+            <div>
+                <section class="panel">
+                    <div class="head">
+                        <div>
+                            <p class="kicker">ULTIMATE MONSTER PARK · SERVER SHARED</p>
+                            <h2>終極怪物公園</h2>
+                        </div>
+                    </div>
+                    <div id="serverUltimate"></div>
+                </section>
+                <section class="panel">
+                    <div class="head">
+                        <div>
+                            <p class="kicker">ACCOUNT SHARED</p>
+                            <h2>帳號共通每週任務</h2>
+                        </div>
+                    </div>
+                    <div id="account"></div>
+                </section>
+                <section class="panel">
+                    <div class="head">
+                        <div>
+                            <p class="kicker">WEEKLY BOSS</p>
+                            <h2>週王</h2>
+                        </div>
+                    </div>
+                    <p class="note">依角色記錄完成狀態與結晶石。</p>
+                    <div id="weeklyBoss"></div>
+                </section>
+            </div>
+        </div>
+        <p class="footer">資料只儲存在本機瀏覽器，不會連線到任何原廠 API。</p>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
