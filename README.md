@@ -1,1 +1,1 @@
-純紀錄於local storeage 透過config import處理
+純紀錄於local storeage。不透過config import處理
